@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm test
+      - name: Smoke test the CLI itself
+        run: |
+          node bin/model-router.mjs --sensitivity high --complexity high --json
+          node bin/model-router.mjs --sensitivity=medium --complexity=low --json
+          node bin/model-router.mjs --help
