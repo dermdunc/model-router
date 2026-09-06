@@ -1,5 +1,10 @@
 # Model Router
 
+> **Archived 2026-09-06.** Finished factory-output experiment: the CLI shipped, its fix ported
+> into `agentic-tekton`'s live `RoutingWidget.astro`, and the accompanying blog post published.
+> Nothing else in the estate depends on it at runtime. See `docs/decisions.md` (2026-09-06) and
+> `docs/retire-promote-review.md`.
+
 **Classification:** factory-output · **Owner:** dermdunc · **Status:** experimental, v0
 
 [![CI](https://github.com/dermdunc/model-router/actions/workflows/ci.yml/badge.svg)](https://github.com/dermdunc/model-router/actions/workflows/ci.yml)
